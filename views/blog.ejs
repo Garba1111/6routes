@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.Username %> </title>
+</head>
+<body>
+    <header>
+        <h1>Blogs</h1>
+        <a href="/useradmin/<%= user._id %>">User Admin</a>
+        <a href="/addblog/<%= user._id %>">bbbbbbbbbbb</a>
+    </header>
+
+    <div>
+        <% if (blogs.length>0) { %>
+            <% blogs.forEach(i => { %>
+             <div>
+                <h3><%= i.title %> </h3>
+                <p><%= i.Desc %> </p>
+             </div>
+            <% }) %>
+        <% } else { %>
+         <center><h3>No Blog</h3></center>
+        <% } %>
+    </div>
+
+</body>
+</html>
